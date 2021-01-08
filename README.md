@@ -1,6 +1,6 @@
 # Hashichrome extension
 
-Foobar is a Python library for dealing with word pluralization.
+This is my Hashicorp Vault chrome extension, I could not find any good and working chrome extension to access your secrets.
 
 ## Installation
 ```bash
