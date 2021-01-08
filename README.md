@@ -15,7 +15,7 @@ yarn build
 Then a build folder will be created
 
 ## Loading unpacked extension
-1. Go to [chrome://extension](chrome://extension)
+1. Go to [chrome://extension](chrome://extensions/)
 2. Make sure your Developer Mode is enabled.
 3. Click "Load Unpacked" and select the build folder that was just created.
 
