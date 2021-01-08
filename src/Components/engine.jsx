@@ -1,13 +1,19 @@
-import React, { useState, useEffect, Component } from 'react';
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { Card } from 'react-bootstrap';
+
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const engine = (props) => {
-
     return (
-        <Card>
-            <Card.Body>{props.engineName}</Card.Body>
-            {/* <Card.Body>michael bilosovich</Card.Body> */}
-        </Card>
+        <a style={{ cursor: 'pointer' }}>
+            <Card>
+                <Card.Body>
+                    <div class="float-left"> {props.engineName} </div>
+                    <div class="float-right"> <FontAwesomeIcon icon={faChevronRight} /> </div>
+                </Card.Body>
+            </Card>
+        </a>
     );
 }
 

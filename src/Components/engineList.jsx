@@ -1,38 +1,20 @@
-import React, { useState } from 'react';
+/*global chrome*/
+import React, { useState, useEffect } from 'react';
 import Engine from './engine.jsx'
 
 export default function engineList() {
 
-	// const [engineNameList] = useState(getEnginelist());
+	 const [engines, setEngines] = useState([]);
 
+	 useEffect(() => {
+		fetch('https://reqres.in/api/unknown').then(res => res.json().then(engineList => {
+			setEngines(engineList.data);
+		}))
+	})
 
-	// const getEnginelist = () => {
-	// 	let engineList = [];
-	// 	fetch('https://reqres.in/api/unknown')
-	// 		.then(res => res.json()).then((data) => {
-	// 			data.data.forEach((engine) => {
-	// 				engineList.push(engine);
-	// 			})
-	// 		})
-	// 	return engineList;
-	//}
 	return (
 		<div>
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
-			<Engine engineName="helloWorld" />
+			{engines.map(engine => <Engine engineName={engine.name} />)}
 		</div>
 	);
 }
