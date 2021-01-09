@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
 export default function LoginForm() {
-
-	const [test, setTest] = useState('wahad');
 
 	return (
 		<Container>
