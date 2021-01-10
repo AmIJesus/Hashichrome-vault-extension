@@ -9,13 +9,19 @@
     "default_title": "Cheeki Breeki Extension"
   },
   "permissions": [
+    "background",
     "activeTab",
     "storage",
     "notifications",
     "debugger",
-    "tabs",
-    "background"
+    "tabs"
   ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
   "icons": {
     "256": "react256.png"
   }

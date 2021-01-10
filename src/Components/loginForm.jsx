@@ -4,7 +4,7 @@ import { Form, Button, Container } from 'react-bootstrap';
 export default function LoginForm() {
 
 	return (
-		<Container>
+		<Container className="mt-3">
 			<Form>
 				<Form.Group controlId="token">
 					<Form.Control type="text" placeholder="Token" />
