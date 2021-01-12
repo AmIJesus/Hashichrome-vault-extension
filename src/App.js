@@ -1,6 +1,6 @@
 /*global chrome*/
 import React, { Component } from 'react';
-import { MemoryRouter as Router, Route, Switch } from "react-router-dom";
+import { MemoryRouter as Router, Route, Switch, useParams } from "react-router-dom";
 import './App.css';
 import NavBar from './Components/navbar';
 import LoginForm from './Components/loginForm';
@@ -20,7 +20,7 @@ class App extends Component {
                 <Route path="/Login">
                   <LoginForm />
                 </Route>
-                <Route path="/Home">
+                <Route path="/">
                   <EngineList />
                 </Route>
               </Switch>

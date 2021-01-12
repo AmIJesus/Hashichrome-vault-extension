@@ -29,7 +29,7 @@ export default function Navigation() {
             </Nav>
             <Nav>
                 {isLoggedIn ?
-                    <Link to="/Home" >
+                    <Link to="/" >
                         <Button variant="secondary" onClick={() => setLogIn(!isLoggedIn)}>
                             <span>Logout</span>
                         </Button>

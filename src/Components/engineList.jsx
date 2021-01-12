@@ -7,8 +7,8 @@ export default function engineList() {
 	 const [engines, setEngines] = useState([]);
 
 	 useEffect(() => {
-		fetch('https://reqres.in/api/unknown').then(res => res.json().then(engineList => {
-			setEngines(engineList.data);
+		fetch('https://jsonplaceholder.typicode.com/comments').then(res => res.json().then(engineList => {
+			setEngines(engineList);
 		}))
 	})
 
